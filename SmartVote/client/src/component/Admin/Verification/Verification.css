@@ -1,0 +1,48 @@
+.btn-verification {
+  padding: 12px 20px;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  float: inline-end;
+  background-color: var(--button-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(178, 152, 231, 0.3); /* Lavender Purple shadow */
+}
+
+.btn-verification:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(178, 152, 231, 0.4); /* Lavender Purple shadow */
+}
+
+.btn-verification:active {
+  transform: translateY(0);
+}
+
+/* Specific styles for the approve button */
+.btn-verification.approve {
+  background-color: var(--button-primary);
+  box-shadow: 0 2px 8px rgba(178, 152, 231, 0.3);
+}
+
+.btn-verification.approve:hover {
+  background-color: var(--button-hover);
+  box-shadow: 0 4px 12px rgba(178, 152, 231, 0.4);
+}
+
+/* Styles for the reset button */
+.btn-verification.reset {
+  background-color: #dc3545;
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+.btn-verification.reset:hover {
+  background-color: #c82333;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
+}

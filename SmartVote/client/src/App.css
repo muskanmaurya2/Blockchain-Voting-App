@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Light Theme Variables */
+.theme-light {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --container-bg: #ffffff;
+  --border-color: #f0f0f0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-shadow: rgba(0, 0, 0, 0.15);
+  --header-color: #B298E7; /* Lavender Purple */
+  --code-bg: #f5f5f5;
+  --code-border: #e0e0e0;
+  --code-text: #B298E7; /* Lavender Purple */
+  --primary-color: #B298E7; /* Lavender Purple */
+  --secondary-color: #B8E3E9; /* Powder Blue */
+  --accent-color-1: #F5B8D5; /* Light Rose Pink */
+  --accent-color-2: #F9BEDD; /* Baby Pink */
+  --button-primary: #B298E7; /* Lavender Purple */
+  --button-hover: #9a7ed9; /* Darker Lavender Purple */
+  --button-secondary: #B8E3E9; /* Powder Blue */
+  --button-secondary-hover: #9dd7df; /* Darker Powder Blue */
+}
+
+/* Dark Theme Variables */
+.theme-dark {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --container-bg: #1e1e1e;
+  --border-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --hover-shadow: rgba(0, 0, 0, 0.5);
+  --header-color: #B8E3E9; /* Powder Blue */
+  --code-bg: #2d2d2d;
+  --code-border: #444444;
+  --code-text: #F5B8D5; /* Light Rose Pink */
+  --primary-color: #B8E3E9; /* Powder Blue */
+  --secondary-color: #B298E7; /* Lavender Purple */
+  --accent-color-1: #F9BEDD; /* Baby Pink */
+  --accent-color-2: #F5B8D5; /* Light Rose Pink */
+  --button-primary: #B8E3E9; /* Powder Blue */
+  --button-hover: #9dd7df; /* Darker Powder Blue */
+  --button-secondary: #B298E7; /* Lavender Purple */
+  --button-secondary-hover: #9a7ed9; /* Darker Lavender Purple */
+}
+
+/* Fallback for data-theme attribute */
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --input-background: #f8f8f8;
+}
+
+[data-theme="dark"] {
+  --background-color: #1e1e1e;
+  --input-background: #2d2d2d;
+}
+
+/* Settings Dropdown Positioning */
+.settings-dropdown {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .settings-dropdown {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+/* Apply background color to entire page */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  color: var(--text-color);
+  font-weight: 700;
+  margin: 24px 0;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--code-bg);
+  padding: 4px 8px;
+  font-size: 105%;
+  border-radius: 6px;
+  border: 1px solid var(--code-border);
+  color: var(--code-text);
+}
+
+.container-main {
+  background-color: transparent;
+  padding: 24px;
+  margin: 20px auto;
+  width: max-content;
+  overflow: auto;
+  flex: 1;
+}
+
+.container-item {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background-color: var(--container-bg);
+  border-radius: 8px; /* Rounded corners */
+  width: 977px;
+  padding: 28px;
+  margin: 20px auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle box shadow */
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  position: relative;
+}
+
+/* Accent Edge - Purple line on the left */
+.container-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--button-primary); /* Lavender Purple */
+  border-radius: 8px 0 0 8px;
+}
+
+.container-item:hover {
+  box-shadow: 0 8px 16px var(--hover-shadow);
+}
+
+.title {
+  text-transform: capitalize;
+  color: var(--header-color);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.container-list {
+  width: 100%;
+  padding: 16px;
+  margin: 8px auto;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  overflow: auto;
+}
+.center-items {
+  display: grid;
+  place-items: center;
+  min-height: 200px;
+}
+
+@media all and (max-width: 1020px) {
+  .container-item {
+    width: 777px;
+  }
+}
+@media all and (max-width: 900px) {
+  .container-item {
+    width: 800px;
+    display: block;
+  }
+}
+@media all and (max-width: 850px) {
+  .container-item {
+    width: 700px;
+  }
+}
+@media all and (max-width: 750px) {
+  .container-item {
+    width: 600px;
+  }
+}
+@media all and (max-width: 650px) {
+  .container-item {
+    width: 400px;
+  }
+}
+@media all and (max-width: 400px) {
+  .container-item {
+    width: 300px;
+  }
+}
+
+.info,
+.attention,
+.alert,
+.success {
+  border-left: none; /* Remove dark vertical line */
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Accent Edge for info boxes */
+.info::before,
+.attention::before,
+.alert::before,
+.success::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: 6px 0 0 6px;
+}
+
+.info::before {
+  background-color: #0c5460;
+}
+.attention::before {
+  background-color: #856404;
+}
+.alert::before {
+  background-color: #721c24;
+}
+.success::before {
+  background-color: #155724;
+}
+
+/* Email Notification Form Styles */
+.email-notification-form {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.email-input {
+  margin: 12px 0;
+  margin-left: 0;
+  padding: 12px 14px;
+  display: block;
+  width: 100%;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: #cccccc; /* Light gray border */
+  background-color: #ffffff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+.notify-button {
+  padding: 12px 20px;
+  background-color: var(--button-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  width: 100%;
+  max-width: 200px;
+}
+
+.notify-button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--hover-shadow);
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.success-message {
+  color: #28a745;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0;
+}

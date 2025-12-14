@@ -1,0 +1,146 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+nav {
+  display: flex;
+  height: 90px; /* Increased height for robust look */
+  background: linear-gradient(135deg, var(--button-primary) 0%, var(--button-primary) 100%);
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+  padding: 0 30px;
+  width: 100%; /* Ensure full width */
+  min-width: fit-content; /* Allow navbar to expand as needed */
+}
+
+nav .header {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+nav .navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  flex-wrap: nowrap; /* Prevent items from wrapping */
+  width: auto; /* Allow natural width */
+  max-width: 100%; /* Ensure it doesn't exceed navbar width */
+}
+
+nav .navbar-links a {
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: capitalize;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+nav .navbar-links a:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav .burger-menu {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+nav .burger-menu:hover {
+  transform: scale(1.1);
+}
+
+.nav-active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Vertical separator between admin and user functions */
+.navbar-separator {
+  width: 2px;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+  margin: 0 15px;
+  align-self: center;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+  border-radius: 1px;
+}
+
+/* Vertical line between Verification and Registration */
+.navbar-links li:nth-child(3) a {
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  padding-right: 25px;
+}
+
+@media all and (max-width: 777px) {
+  nav {
+    padding: 0 15px;
+    height: 90px; /* Maintain consistent height on mobile */
+    width: 100vw; /* Full viewport width on mobile */
+  }
+  nav .burger-menu {
+    display: block;
+  }
+  nav .navbar-links {
+    background: linear-gradient(135deg, var(--button-primary) 0%, var(--button-primary) 100%);
+    display: block;
+    width: 50%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0px;
+    transform: translate(-700px);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    border-radius: 0 0 8px 0;
+    min-width: 200px; /* Ensure minimum width on mobile */
+  }
+  nav .navbar-links li {
+    padding: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  nav .navbar-links li:first-child {
+    border-top: none;
+  }
+  /* Hide separators on mobile */
+  .navbar-separator {
+    display: none;
+  }
+  .navbar-links li:nth-child(3) a {
+    border-right: none;
+    padding-right: 20px;
+  }
+}

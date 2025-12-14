@@ -1,0 +1,17 @@
+import pandas as pd
+
+# Sample voter data
+voters = [
+    {"name": "John Doe", "address": "0x742d35Cc6634C0532925a3b844Bc454e4438f44e", "phone": "123-456-7890"},
+    {"name": "Jane Smith", "address": "0x7cB57B5A97eAbe94205C07890BE4c1aD31E486A8", "phone": "234-567-8901"},
+    {"name": "Bob Johnson", "address": "0x44365a305f47847712b5e5523870512432331122", "phone": "345-678-9012"},
+    {"name": "Alice Williams", "address": "0x32bA16f457A55bF3965f81a35754f44c28182121", "phone": "456-789-0123"},
+    {"name": "Charlie Brown", "address": "0x5dA58447490961493e435946145b965123456789", "phone": "567-890-1234"}
+]
+
+# Create DataFrame
+df = pd.DataFrame(voters)
+
+# Save to Excel
+df.to_excel("voter_example.xlsx", index=False)
+print("Excel file created successfully!")

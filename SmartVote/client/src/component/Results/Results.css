@@ -1,0 +1,140 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+th {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 2px solid var(--button-primary);
+  background-color: #f0f9ff;
+  font-weight: 700;
+  color: #2c3e50;
+}
+td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e8e8e8;
+  color: #555;
+}
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+tr:hover {
+  background-color: #f0f8ff;
+}
+.container-winner {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background: linear-gradient(135deg, #f0fff4 0%, #e0ffe8 100%);
+  border-radius: 12px;
+  width: 700px;
+  padding: 28px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: auto;
+  border-left: 5px solid #22c55e;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.winner-logo-container {
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  border: 3px solid #22c55e;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.2);
+}
+
+.winner-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.winner-slogan {
+  padding: 12px 0;
+  color: #d4a82a;
+  font-size: 1.3em;
+  margin: 12px 0;
+  text-align: justify;
+  overflow: auto;
+  font-weight: 600;
+}
+.winner-info {
+  width: 73%;
+  max-height: 150px;
+  display: inline-block;
+  margin-right: 1%;
+  overflow: auto;
+}
+.winner-votes {
+  width: 25%;
+  padding: 3px;
+  display: inline-block;
+  margin-left: 1%;
+}
+.winner-tag {
+  text-align: left;
+  color: #22c55e;
+  font-weight: 700;
+  font-size: 16px;
+}
+.votes-tag {
+  text-align: left;
+  color: #888;
+  font-weight: 600;
+  font-size: 14px;
+}
+.vote-count {
+  margin-top: 11px;
+  padding: 3px;
+  font-size: 57px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.candidate-logo-cell {
+  text-align: center;
+  padding: 8px;
+}
+
+.results-candidate-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+@media all and (max-width: 850px) {
+  .container-winner {
+    width: 700px;
+  }
+}
+@media all and (max-width: 750px) {
+  .container-winner {
+    width: 600px;
+  }
+}
+@media all and (max-width: 650px) {
+  .container-winner {
+    width: 400px;
+  }
+}
+@media all and (max-width: 400px) {
+  .container-winner {
+    width: 300px;
+  }
+}
