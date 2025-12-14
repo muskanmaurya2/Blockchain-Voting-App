@@ -130,7 +130,6 @@ Add a custom network:
 
 - **Network Name:** Ganache Local
 - **RPC URL:** http://127.0.0.1:8545
-- **Chain ID:** 1337
 
 Import:
 
@@ -148,8 +147,6 @@ Import:
 ---
 
 ## 📸 Screenshots
-
-Create a folder named `screenshots/` and add images:
 
 ```
 screenshots/
