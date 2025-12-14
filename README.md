@@ -125,12 +125,6 @@ App runs at 👉 http://localhost:3000
 ## 🖱️ Usage Guide
 
 ### 🔧 MetaMask Configuration
-
-Add a custom network:
-
-- **Network Name:** Ganache Local
-- **RPC URL:** http://127.0.0.1:8545
-
 Import:
 
 - **First private key** → Admin
@@ -146,25 +140,6 @@ Import:
 
 ---
 
-## 📸 Screenshots
-
-```
-screenshots/
-├── Admin_Sign_in1.png
-├── add_candidate2.png
-├── verification3.png
-├── voting4.png
-├── voting_end5.png
-
-```
-
-- 🔐 OTP Authentication
-- 🛠️ Admin Dashboard
-- 🗳️ Voting Page
-- 📊 Total Voters
-- 🌗 Dark / Light Mode
-
----
 
 ## 👥 Contributors
 
