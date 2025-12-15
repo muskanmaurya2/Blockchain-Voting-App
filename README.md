@@ -140,7 +140,10 @@ Import:
 
 ---
 
+## 📸 Screenshots
+![image alt](https://github.com/muskanmaurya2/Blockchain-Voting-App/tree/918394d2147c013c8255dc1731480697fb16cfb4/SmartVote/screenshots)
 
+---
 ## 👥 Contributors
 
 - Muskan Maurya 
